@@ -12,6 +12,11 @@
 		1A126EF11DB28759000A9EF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A126EEF1DB28759000A9EF3 /* Main.storyboard */; };
 		1A126EF31DB28759000A9EF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A126EF21DB28759000A9EF3 /* Assets.xcassets */; };
 		1A126EF61DB28759000A9EF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A126EF41DB28759000A9EF3 /* LaunchScreen.storyboard */; };
+		1A126EFE1DB29D36000A9EF3 /* vistaCreaTuPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A126EFD1DB29D36000A9EF3 /* vistaCreaTuPizza.swift */; };
+		1A126F001DB2A443000A9EF3 /* OpcionesParea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A126EFF1DB2A443000A9EF3 /* OpcionesParea.swift */; };
+		1A126F021DB2AE61000A9EF3 /* vistaSeleccionaQueso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A126F011DB2AE61000A9EF3 /* vistaSeleccionaQueso.swift */; };
+		1A126F041DB2AE96000A9EF3 /* vistaTipoMasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A126F031DB2AE96000A9EF3 /* vistaTipoMasa.swift */; };
+		1A126F061DB2AEBE000A9EF3 /* vistaSeleccionaIngrediente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A126F051DB2AEBE000A9EF3 /* vistaSeleccionaIngrediente.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		1A126EF21DB28759000A9EF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A126EF51DB28759000A9EF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A126EF71DB28759000A9EF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A126EFD1DB29D36000A9EF3 /* vistaCreaTuPizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaCreaTuPizza.swift; sourceTree = "<group>"; };
+		1A126EFF1DB2A443000A9EF3 /* OpcionesParea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpcionesParea.swift; sourceTree = "<group>"; };
+		1A126F011DB2AE61000A9EF3 /* vistaSeleccionaQueso.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaSeleccionaQueso.swift; sourceTree = "<group>"; };
+		1A126F031DB2AE96000A9EF3 /* vistaTipoMasa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaTipoMasa.swift; sourceTree = "<group>"; };
+		1A126F051DB2AEBE000A9EF3 /* vistaSeleccionaIngrediente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaSeleccionaIngrediente.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +67,11 @@
 				1A126EEB1DB28759000A9EF3 /* AppDelegate.swift */,
 				1A126EED1DB28759000A9EF3 /* ViewController.swift */,
 				1A126EEF1DB28759000A9EF3 /* Main.storyboard */,
+				1A126EFF1DB2A443000A9EF3 /* OpcionesParea.swift */,
+				1A126F011DB2AE61000A9EF3 /* vistaSeleccionaQueso.swift */,
+				1A126F031DB2AE96000A9EF3 /* vistaTipoMasa.swift */,
+				1A126F051DB2AEBE000A9EF3 /* vistaSeleccionaIngrediente.swift */,
+				1A126EFD1DB29D36000A9EF3 /* vistaCreaTuPizza.swift */,
 				1A126EF21DB28759000A9EF3 /* Assets.xcassets */,
 				1A126EF41DB28759000A9EF3 /* LaunchScreen.storyboard */,
 				1A126EF71DB28759000A9EF3 /* Info.plist */,
@@ -136,8 +151,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A126EFE1DB29D36000A9EF3 /* vistaCreaTuPizza.swift in Sources */,
+				1A126F041DB2AE96000A9EF3 /* vistaTipoMasa.swift in Sources */,
 				1A126EEE1DB28759000A9EF3 /* ViewController.swift in Sources */,
 				1A126EEC1DB28759000A9EF3 /* AppDelegate.swift in Sources */,
+				1A126F061DB2AEBE000A9EF3 /* vistaSeleccionaIngrediente.swift in Sources */,
+				1A126F021DB2AE61000A9EF3 /* vistaSeleccionaQueso.swift in Sources */,
+				1A126F001DB2A443000A9EF3 /* OpcionesParea.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
