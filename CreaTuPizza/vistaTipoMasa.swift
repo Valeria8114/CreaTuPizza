@@ -7,12 +7,14 @@
 //
 
 import UIKit
-var tipoMasa = ["Delgada","Crujiente","Gruesa"]
+var tipoMasa = [TipoMasa.Delgada,TipoMasa.Crujiente,TipoMasa.Gruesa]
 
 class vistaTipoMasa: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
+
     
 {
     
+    var datos = Datos()
     
     
     @IBOutlet weak var SeleccionarMasa: UIPickerView!
@@ -42,9 +44,37 @@ class vistaTipoMasa: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return tipoMasa[row]
+        return   "\(tipoMasa[row])"
         
     }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        if(row == 0)
+        {
+           datos.tipoDeMasa = TipoMasa.Delgada
+            
+        }
+        else if(row == 1)
+        {
+             datos.tipoDeMasa = TipoMasa.Crujiente
+            
+        }
+        else
+        {
+             datos.tipoDeMasa = TipoMasa.Gruesa
+        }
+      
+        }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let ventana = segue.destination as! vistaSeleccionaQueso
+        ventana.datos = datos
+    
+    
+        
+    }
+
     /*
      // MARK: - Navigation
      

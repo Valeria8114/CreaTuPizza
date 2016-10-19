@@ -10,15 +10,21 @@ import UIKit
 
 
 
-class vistaSeleccionaIngrediente: UIViewController {
 
-    @IBOutlet weak var Boxbutton: UIButton!
+class vistaSeleccionaIngrediente: UIViewController {
     
+   var datos = Datos()
+    
+    @IBOutlet weak var sPeperoni: UISwitch!
+    @IBOutlet weak var sPavo: UISwitch!
+    @IBOutlet weak var sSalchicha: UISwitch!
+ 
+    @IBOutlet weak var sJamon: UISwitch!
+    @IBOutlet weak var sAceituna: UISwitch!
+    @IBOutlet weak var sCebolla: UISwitch!
+    @IBOutlet weak var sPimiento: UISwitch!
+    @IBOutlet weak var sPiña: UISwitch!
    
-    var checkbox = UIImage(named: "checked")
-    var uncheckbox = UIImage(named: "unchecked")
-    var isChecked:Bool = true
-    
     
     
     override func viewDidLoad() {
@@ -34,21 +40,7 @@ class vistaSeleccionaIngrediente: UIViewController {
     
     
    
-    @IBAction func clicButton(_ sender: AnyObject) {
-    
-        if isChecked == true {
-            isChecked = false
-        } else{
-            isChecked = true}
-
-       
-        if isChecked == true {
-            Boxbutton.setImage(#imageLiteral(resourceName: "checked"), for: UIControlState.normal)
-        }else {
-            Boxbutton.setImage(#imageLiteral(resourceName: "unchecked"), for: UIControlState.normal)
-
-        }
-          /*
+              /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -57,6 +49,96 @@ class vistaSeleccionaIngrediente: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+  
+    @IBAction func chPeperoni(_ sender: AnyObject) {
+        if (sPeperoni.isOn){
+            
+                datos.ingredientes.append(Ingredientes.Pepperoni)
+            
+ 
+        }
+        
+    }
+    
+    
+    @IBAction func chJamon(_ sender: AnyObject) {
+        if (sJamon.isOn){
+           
+            datos.ingredientes.append(Ingredientes.Jamon)
+
+            
+            
+        }
+    }
+    
+    @IBAction func chPavo(_ sender: AnyObject) {
+        if (sPavo.isOn){
+            datos.ingredientes.append(Ingredientes.Pavo)
+
+            }
+            
+        
+    }
+    
+  
+    @IBAction func chSalchicha(_ sender: AnyObject) {
+    
+        if (sSalchicha.isOn){
+            
+            datos.ingredientes.append(Ingredientes.Salchicha)
+            
+            
+        }
+    }
+    
+    @IBAction func chAceituna(_ sender: AnyObject) {
+        if (sAceituna.isOn){
+            
+            datos.ingredientes.append(Ingredientes.Aceituna)
+
+            
+            
+        }
+    }
+   
+    @IBAction func chCebolla(_ sender: AnyObject) {
+        if (sCebolla.isOn){
+        
+            datos.ingredientes.append(Ingredientes.Cebolla)
+            
+            
+        }
+    }
+    
+    @IBAction func chPimiento(_ sender: AnyObject) {
+        if (sPimiento.isOn){
+            datos.ingredientes.append(Ingredientes.Pimiento)
+            
+            
+        }
+    }
+    
+    @IBAction func chPiña(_ sender: AnyObject) {
+        if (sPiña.isOn){
+         
+            datos.ingredientes.append(Ingredientes.Piña)
+            
+            
+        }
     }
 
+    @IBAction func continuarIngredientes(_ sender: AnyObject) {
+        if (datos.ingredientes.count>5){
+        print("Solo puedes seleccionar de 1 a 5 ingredientes")}
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let ventana = segue.destination as! vistaConfirmar
+        ventana.datos = datos}
+    
+    
+    
+    
+    
 }

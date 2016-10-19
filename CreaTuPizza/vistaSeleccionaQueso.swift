@@ -7,13 +7,13 @@
 //
 
 import UIKit
-var tipoQueso = ["Mozarela","Chedar","Parmesano","Sin Queso"]
+var tipoQueso = [TipoQueso.Cheddar,TipoQueso.Mozarela,TipoQueso.Parmesano,TipoQueso.Sin_Queso]
 
 class vistaSeleccionaQueso: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     
 {
     
-    
+    var datos = Datos()
     @IBOutlet weak var SeleccionarQueso: UIPickerView!
     
     
@@ -41,9 +41,35 @@ class vistaSeleccionaQueso: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return tipoQueso[row]
+        return "\(tipoQueso[row])"
         
     }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        if(row == 0)
+        {
+            datos.tipoDeQueso = TipoQueso.Cheddar
+            
+        }
+        else if(row == 1)
+        {
+            datos.tipoDeQueso = TipoQueso.Mozarela
+            
+        }
+        else if(row == 2)
+        {
+            datos.tipoDeQueso = TipoQueso.Parmesano
+        }
+        else {
+            datos.tipoDeQueso = TipoQueso.Sin_Queso
+        }
+       
+        
+        
+        
+        
+    }
+
     /*
      // MARK: - Navigation
      
@@ -53,6 +79,12 @@ class vistaSeleccionaQueso: UIViewController, UIPickerViewDelegate, UIPickerView
      // Pass the selected object to the new view controller.
      }
      */
+
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let ventana = segue.destination as! vistaSeleccionaIngrediente
+        ventana.datos = datos}
+        
 }
 

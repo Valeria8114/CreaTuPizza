@@ -17,6 +17,7 @@
 		1A126F021DB2AE61000A9EF3 /* vistaSeleccionaQueso.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A126F011DB2AE61000A9EF3 /* vistaSeleccionaQueso.swift */; };
 		1A126F041DB2AE96000A9EF3 /* vistaTipoMasa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A126F031DB2AE96000A9EF3 /* vistaTipoMasa.swift */; };
 		1A126F061DB2AEBE000A9EF3 /* vistaSeleccionaIngrediente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A126F051DB2AEBE000A9EF3 /* vistaSeleccionaIngrediente.swift */; };
+		1A93CF3E1DB69937005A410D /* vistaConfirmar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A93CF3D1DB69937005A410D /* vistaConfirmar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1A126F011DB2AE61000A9EF3 /* vistaSeleccionaQueso.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaSeleccionaQueso.swift; sourceTree = "<group>"; };
 		1A126F031DB2AE96000A9EF3 /* vistaTipoMasa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaTipoMasa.swift; sourceTree = "<group>"; };
 		1A126F051DB2AEBE000A9EF3 /* vistaSeleccionaIngrediente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = vistaSeleccionaIngrediente.swift; sourceTree = "<group>"; };
+		1A93CF3D1DB69937005A410D /* vistaConfirmar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = vistaConfirmar.swift; path = ../vistaConfirmar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				1A126EEB1DB28759000A9EF3 /* AppDelegate.swift */,
+				1A93CF3D1DB69937005A410D /* vistaConfirmar.swift */,
 				1A126EED1DB28759000A9EF3 /* ViewController.swift */,
 				1A126EEF1DB28759000A9EF3 /* Main.storyboard */,
 				1A126EFF1DB2A443000A9EF3 /* OpcionesParea.swift */,
@@ -158,6 +161,7 @@
 				1A126F061DB2AEBE000A9EF3 /* vistaSeleccionaIngrediente.swift in Sources */,
 				1A126F021DB2AE61000A9EF3 /* vistaSeleccionaQueso.swift in Sources */,
 				1A126F001DB2A443000A9EF3 /* OpcionesParea.swift in Sources */,
+				1A93CF3E1DB69937005A410D /* vistaConfirmar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +323,7 @@
 				1A126EFC1DB28759000A9EF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

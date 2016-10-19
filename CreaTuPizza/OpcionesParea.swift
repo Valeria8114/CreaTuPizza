@@ -8,9 +8,29 @@
 
 import Foundation
 
-struct Datos {
-  let tamaños = ["Chica","Mediana","Grande"]
-    let tipoDeMasa = ["Crujiente","Delgada","Gruesa"]
-    let tipoDeQueso = ["mozarela", "cheddar", "parmesano", "sin queso"]
+class Datos {
+    var tamaño:Tamaño?
+    var tipoDeMasa:TipoMasa?
+    var tipoDeQueso : TipoQueso?
+    var ingredientes : [Ingredientes] = []
+    
+  
     
 }
+
+enum Tamaño{
+    case Pequeña, Mediana, Grande
+}
+
+enum TipoMasa{
+    case Delgada, Crujiente, Gruesa
+}
+
+enum TipoQueso{
+    case Mozarela, Cheddar, Parmesano, Sin_Queso
+}
+
+enum Ingredientes{
+    case Jamon, Pepperoni, Pavo, Salchicha, Aceituna, Cebolla, Pimiento, Piña, Anchoa
+}
+

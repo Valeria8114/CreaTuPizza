@@ -7,11 +7,13 @@
 //
 
 import UIKit
-var tamaño = ["Pequeña","Mediana","Grande"]
+  let tamaños = [Tamaño.Pequeña, Tamaño.Mediana, Tamaño.Grande]
 
 class vistaCreaTuPizza: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
 
 {
+    var datos = Datos()
+
   
    @IBOutlet weak var seleccionarTamaño: UIPickerView!
    
@@ -37,13 +39,46 @@ class vistaCreaTuPizza: UIViewController, UIPickerViewDelegate, UIPickerViewData
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return tamaño.count;
+        return tamaños.count;
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return tamaño[row]
+        return "\(tamaños[row])"
     
     }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        if(row == 0)
+        {
+           datos.tamaño = Tamaño.Pequeña
+            
+        }
+        else if(row == 1)
+        {
+              datos.tamaño = Tamaño.Mediana
+            
+        }
+        else
+        {
+               datos.tamaño = Tamaño.Grande
+        }
+       
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let ventana = segue.destination as! vistaTipoMasa
+        ventana.datos = datos
+        
+    }
+    
+        
+    }
+    
+
+            
+
+ 
        /*
     // MARK: - Navigation
 
@@ -54,5 +89,5 @@ class vistaCreaTuPizza: UIViewController, UIPickerViewDelegate, UIPickerViewData
     }
     */
   
-    }
+
 
